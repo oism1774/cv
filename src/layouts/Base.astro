@@ -1,0 +1,51 @@
+---
+import '../styles/global.css';
+import { SITE_URL } from '../config';
+import { languages, ogLocales, type Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+  title: string;
+  description: string;
+}
+
+const { lang, title, description } = Astro.props;
+const url = `${SITE_URL}/${lang}/`;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#09090b" />
+    <link rel="canonical" href={url} />
+    {languages.map((l) => <link rel="alternate" hreflang={l} href={`${SITE_URL}/${l}/`} />)}
+    <link rel="alternate" hreflang="x-default" href={`${SITE_URL}/en/`} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="khandev.xyz" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:locale" content={ogLocales[lang]} />
+    {languages.filter((l) => l !== lang).map((l) => <meta property="og:locale:alternate" content={ogLocales[l]} />)}
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Geist+Mono:wght@400..500&family=Geist:wght@400..600&display=swap"
+    />
+  </head>
+  <body class="min-h-screen overflow-x-hidden">
+    <slot />
+  </body>
+</html>

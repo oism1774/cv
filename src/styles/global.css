@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-background: #09090b;
+  --color-foreground: #fafafa;
+  --color-card: #0c0c0f;
+  --color-border: #27272a;
+  --color-muted: #a1a1aa;
+  --color-secondary: #18181b;
+  --color-accent: #10b981;
+  --color-accent-foreground: #022c22;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  ::selection {
+    @apply bg-accent text-accent-foreground;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.cursor {
+  animation: blink 1.1s steps(1) infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cursor {
+    animation: none;
+  }
+}

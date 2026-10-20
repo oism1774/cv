@@ -1,0 +1,59 @@
+---
+import Button from './Button.astro';
+import { terminal } from '../i18n/common';
+import type { Dictionary } from '../i18n/types';
+import type { Lang } from '../i18n';
+
+interface Props {
+  lang: Lang;
+  t: Dictionary['hero'];
+}
+
+const { lang, t } = Astro.props;
+const { path, prompt, command } = terminal.hero;
+---
+
+<section class="py-20 sm:py-28">
+  <p class="font-mono text-sm sm:text-base" aria-label={`${path} ${prompt} ${command}`}>
+    <span data-typing aria-hidden="true"><span class="text-muted">{path}</span> <span class="text-accent">{prompt}</span> <span class="text-foreground">{command}</span></span><span
+      class="cursor ml-0.5 inline-block h-[1.1em] w-[0.55em] translate-y-[0.2em] bg-accent"
+      aria-hidden="true"></span>
+  </p>
+
+  <h1 class="mt-8 font-serif text-5xl font-semibold tracking-tight sm:text-7xl">{t.name}</h1>
+  <p class="mt-4 text-xl text-foreground sm:text-2xl">{t.role}</p>
+  <p class="mt-3 max-w-2xl text-base text-muted sm:text-lg">{t.tagline}</p>
+  <p class="mt-4 font-mono text-sm text-muted">{t.location}</p>
+
+  <div class="mt-10 flex flex-wrap gap-3">
+    <Button href={`/cv/orkhan-ismayilov-cv-${lang}.pdf`} download>{t.cv}</Button>
+    <Button href="#contact" variant="secondary">{t.contact}</Button>
+  </div>
+</section>
+
+<script>
+  const el = document.querySelector<HTMLElement>('[data-typing]');
+  if (el && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // Collect text nodes, empty them, then refill one character at a time.
+    const walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    const nodes: { node: Text; text: string }[] = [];
+    while (walker.nextNode()) {
+      const node = walker.currentNode as Text;
+      nodes.push({ node, text: node.data });
+      node.data = '';
+    }
+    let i = 0;
+    let pos = 0;
+    const tick = () => {
+      if (i >= nodes.length) return;
+      const { node, text } = nodes[i];
+      node.data = text.slice(0, ++pos);
+      if (pos >= text.length) {
+        i++;
+        pos = 0;
+      }
+      setTimeout(tick, 55 + Math.random() * 45);
+    };
+    setTimeout(tick, 400);
+  }
+</script>
