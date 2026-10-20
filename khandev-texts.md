@@ -19,7 +19,7 @@ Baku, Azerbaijan
 Buttons: `Download CV` · `Contact`
 
 ### About - `$ whoami`
-I keep servers, websites and mail running. Most recently I administered shared hosting and VPS at a hosting company: migrations, DNS, mail, client issues. Now I'm systematizing my Linux knowledge on the RHCSA track and learning AWS.
+I run Linux servers, hosting and email. Most recently I administered shared hosting and VPS at a hosting company - migrations, DNS, mail and client issues. Now I'm deepening my Linux skills on the RHCSA track and learning AWS.
 
 ### Experience - `$ cat experience.log`
 
@@ -78,7 +78,7 @@ Linux, хостинг и почтовая инфраструктура - дви�
 Кнопки: `Скачать CV` · `Связаться`
 
 ### Обо мне
-Слежу, чтобы серверы, сайты и почта работали. Последнее место - хостинговая компания: администрировал shared hosting и VPS, миграции, DNS, почту, проблемы клиентов. Сейчас систематизирую знания Linux по программе RHCSA и осваиваю AWS.
+Администрирую Linux-серверы, хостинг и почту. Последнее место - хостинговая компания: shared hosting и VPS, миграции, DNS, почта и задачи клиентов. Сейчас углубляю Linux по программе RHCSA и изучаю AWS.
 
 ### Опыт
 
@@ -137,7 +137,7 @@ Bakı, Azərbaycan
 Düymələr: `CV-ni yüklə` · `Əlaqə`
 
 ### Haqqımda
-Serverlərin, saytların və email-in fasiləsiz işləməsini təmin edirəm. Son iş yerim hostinq şirkəti olub: shared hosting və VPS administrasiyası, miqrasiyalar, DNS, email, müştəri problemləri. Hazırda RHCSA proqramı üzrə Linux biliklərimi sistemləşdirirəm və AWS-i mənimsəyirəm.
+Linux serverlərini, hostinqi və email-i idarə edirəm. Son iş yerim hostinq şirkəti olub: shared hosting və VPS, miqrasiyalar, DNS, email və müştəri məsələləri. Hazırda RHCSA proqramı üzrə Linux biliklərimi dərinləşdirirəm və AWS öyrənirəm.
 
 ### Təcrübə
 

@@ -15,7 +15,7 @@ const en: Dictionary = {
   },
   about: {
     title: 'About',
-    text: "**I keep servers, websites and mail running.** Most recently I administered shared hosting and VPS at a hosting company: migrations, DNS, mail, client issues. Now I'm **systematizing my Linux knowledge** on the RHCSA track and learning AWS.",
+    text: "**I run Linux servers, hosting and email.** Most recently I administered shared hosting and VPS at a hosting company - migrations, DNS, mail and client issues. Now I'm **deepening my Linux skills** on the RHCSA track and learning AWS.",
   },
   experience: {
     title: 'Experience',

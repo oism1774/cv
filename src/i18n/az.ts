@@ -15,7 +15,7 @@ const az: Dictionary = {
   },
   about: {
     title: 'Haqqımda',
-    text: '**Serverlərin, saytların və email-in fasiləsiz işləməsini təmin edirəm.** Son iş yerim hostinq şirkəti olub: shared hosting və VPS administrasiyası, miqrasiyalar, DNS, email, müştəri problemləri. Hazırda RHCSA proqramı üzrə **Linux biliklərimi sistemləşdirirəm** və AWS-i mənimsəyirəm.',
+    text: "**Linux serverlərini, hostinqi və email-i idarə edirəm.** Son iş yerim hostinq şirkəti olub: shared hosting və VPS, miqrasiyalar, DNS, email və müştəri məsələləri. Hazırda RHCSA proqramı üzrə **Linux biliklərimi dərinləşdirirəm** və AWS öyrənirəm.",
   },
   experience: {
     title: 'Təcrübə',
