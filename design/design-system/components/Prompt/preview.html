@@ -1,0 +1,12 @@
+<!-- @dsCard group="Terminal" height=100 -->
+<div class="kd-page" style="padding: 32px;">
+  <p class="kd-prompt"><span class="kd-prompt__user">orkhan@khandev</span>:<span class="kd-prompt__cmd">~</span>$ <span class="kd-prompt__cmd" id="cmd"></span><span class="kd-cursor kd-blink" aria-hidden="true"></span></p>
+</div>
+<script>
+(function () {
+  var el = document.getElementById('cmd'), full = 'cd ~/devops', i = 0;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) { el.textContent = full; return; }
+  setTimeout(function step() { el.textContent = full.slice(0, ++i); if (i < full.length) setTimeout(step, 180); }, 720);
+})();
+</script>

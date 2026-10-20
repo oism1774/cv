@@ -15,7 +15,7 @@ const en: Dictionary = {
   },
   about: {
     title: 'About',
-    text: "I keep servers, websites and mail running. Most recently I administered shared hosting and VPS at a hosting company: migrations, DNS, mail, client issues. Now I'm systematizing my Linux knowledge on the RHCSA track and learning AWS.",
+    text: "**I keep servers, websites and mail running.** Most recently I administered shared hosting and VPS at a hosting company: migrations, DNS, mail, client issues. Now I'm **systematizing my Linux knowledge** on the RHCSA track and learning AWS.",
   },
   experience: {
     title: 'Experience',
@@ -34,7 +34,7 @@ const en: Dictionary = {
         ],
       },
       {
-        company: 'Just for Fun Gaming Club',
+        company: 'Just for Fun',
         role: 'Support / System Administrator',
         period: '2025',
         points: [
@@ -62,16 +62,6 @@ const en: Dictionary = {
       },
     ],
   },
-  stack: {
-    title: 'Stack',
-    groups: [
-      { name: 'Linux', tags: ['Ubuntu', 'Fedora', 'RHEL', 'Bash', 'SSH', 'cron'] },
-      { name: 'Hosting', tags: ['Enhance', 'cPanel', 'WHMCS'] },
-      { name: 'Mail', tags: ['IMAP', 'SMTP', 'imapsync', 'MX / SPF / DKIM / DMARC'] },
-      { name: 'Virtualization', tags: ['Proxmox', 'Docker'] },
-      { name: 'Network', tags: ['DNS', 'VPN', 'Cloudflare'] },
-    ],
-  },
   learning: {
     title: 'Learning now',
     items: [
@@ -87,14 +77,14 @@ const en: Dictionary = {
     degree: "Bachelor's degree, Design",
     period: '2020 - 2024',
     languages: [
-      { name: 'Azerbaijani', value: 'native' },
-      { name: 'Russian', value: 'native' },
-      { name: 'English', value: 'B2 (IELTS 7.0)' },
+      { name: 'Azerbaijani', value: 'native', native: true },
+      { name: 'Russian', value: 'native', native: true },
+      { name: 'English', value: 'C1 (IELTS 7.0)' },
     ],
   },
   contact: {
     title: 'Contact',
-    text: 'Open to system administration, support engineering and junior cloud / DevOps-adjacent roles.',
+    text: 'Open to system administration, support engineering and cloud / DevOps roles.',
   },
   footer: 'Static site on Cloudflare. Built with Astro.',
 };

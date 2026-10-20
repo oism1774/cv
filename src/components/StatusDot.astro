@@ -1,0 +1,12 @@
+---
+import { status } from '../i18n/common';
+
+interface Props {
+  small?: boolean;
+  class?: string;
+}
+
+const { small = false, class: className } = Astro.props;
+---
+
+<span class:list={['kd-status', className]}><span class:list={['kd-dot kd-pulse', { 'kd-dot--sm': small }]} aria-hidden="true"></span>{status}</span>

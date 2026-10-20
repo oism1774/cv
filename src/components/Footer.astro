@@ -1,13 +1,15 @@
 ---
 interface Props {
   text: string;
+  name: string;
 }
 
-const { text } = Astro.props;
+const { text, name } = Astro.props;
 ---
 
-<footer class="border-t border-border">
-  <div class="mx-auto max-w-4xl px-4 py-8 font-mono text-xs text-muted sm:px-6">
-    {text}
+<footer class="kd-footer kd-layer">
+  <div class="kd-container kd-footer__inner">
+    <span>{text}</span>
+    <span>© {new Date().getFullYear()} {name}</span>
   </div>
 </footer>

@@ -1,0 +1,11 @@
+---
+import { logLines } from '../i18n/common';
+
+// Enough lines to cover a tall phone page, then the whole list twice for a seamless -50% loop.
+const half = Array.from({ length: 12 }, () => logLines).flat();
+const text = [...half, ...half].join('\n');
+---
+
+<div class="kd-bglog" aria-hidden="true">
+  <pre class="kd-bglog__track">{text}</pre>
+</div>

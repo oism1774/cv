@@ -1,0 +1,45 @@
+---
+import { learningStatus, learningFooter } from '../i18n/common';
+import type { Item } from '../i18n/types';
+
+interface Props {
+  items: Item[];
+}
+
+const { items } = Astro.props;
+const icon = { progress: '[|]', done: '[ok]', queued: '[..]' };
+---
+
+<div class="kd-term">
+  {
+    items.map((item, i) => {
+      const s = learningStatus[i];
+      return (
+        <div class="kd-log__row" data-state={s.state}>
+          <span class="kd-log__icon" data-spin={s.state === 'progress' ? '' : undefined} aria-hidden="true">
+            {icon[s.state]}
+          </span>
+          <span class="kd-log__name">{item.name}</span>
+          <span class="kd-log__desc">{item.value}</span>
+          <span class="kd-log__status">{s.label}</span>
+        </div>
+      );
+    })
+  }
+  <div class="kd-log__foot">{learningFooter}<span class="kd-blink" aria-hidden="true"> _</span></div>
+</div>
+
+<script>
+  // Spinner frames | / - \ at 180ms each.
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const frames = ['|', '/', '-', '\\'];
+    const els = document.querySelectorAll<HTMLElement>('[data-spin]');
+    let i = 0;
+    if (els.length) {
+      setInterval(() => {
+        i = (i + 1) % frames.length;
+        els.forEach((el) => (el.textContent = `[${frames[i]}]`));
+      }, 180);
+    }
+  }
+</script>

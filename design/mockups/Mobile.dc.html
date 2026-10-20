@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Orkhan Ismayilov - mobile</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&amp;family=Geist:wght@300..600&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#09090b}
+a{color:#fafafa;text-decoration:none}a:hover{color:#ffffff}
+.blink{animation:blink 1.05s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.pulse{animation:pulse 1.8s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+.ln{animation:ln .45s ease-out both}
+@keyframes ln{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:none}}
+.scan{background-image:repeating-linear-gradient(to bottom,rgba(255,255,255,.022) 0,rgba(255,255,255,.022) 1px,transparent 1px,transparent 3px)}
+.roll{background:linear-gradient(to bottom,transparent,rgba(255,255,255,.03),transparent);animation:roll 10s linear infinite}
+@keyframes roll{from{top:-160px}to{top:100%}}
+.fall{animation-name:fall;animation-timing-function:linear;animation-iteration-count:infinite}
+@keyframes fall{from{transform:translateY(0)}to{transform:translateY(5200px)}}
+.logmask{-webkit-mask-image:linear-gradient(to right,transparent,#000 50%);mask-image:linear-gradient(to right,transparent,#000 50%)}
+.logup{animation:logup 420s linear infinite}
+@keyframes logup{to{transform:translateY(-50%)}}
+.still .roll,.still .fall,.still .logup{animation:none}
+@media (prefers-reduced-motion: reduce){.blink,.pulse,.ln,.roll,.fall,.logup{animation:none}}
+</style>
+</helmet>
+<div style="position: relative; overflow: hidden; width: 390px; box-sizing: border-box; background-color: #09090b; color: #fafafa; font-family: 'Geist', system-ui, sans-serif; font-size: 15px; line-height: 1.6;">
+<div aria-hidden="true" class="{{stillClass}}" style="position: absolute; inset: 0; pointer-events: none; z-index: 0; overflow: hidden;">
+<sc-if value="{{bgScan}}" hint-placeholder-val="{{false}}"><div class="scan" style="position: absolute; inset: 0;"></div><div class="roll" style="position: absolute; left: 0; right: 0; height: 160px;"></div></sc-if>
+<sc-if value="{{bgRain}}" hint-placeholder-val="{{false}}"><sc-for list="{{rainCols}}" as="r" hint-placeholder-count="18"><div class="fall" style="position: absolute; top: -700px; left: {{r.left}}; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 1.5; white-space: pre; color: {{r.color}}; animation-duration: {{r.dur}}; animation-delay: {{r.delay}};">{{r.text}}</div></sc-for></sc-if>
+<sc-if value="{{bgLog}}" hint-placeholder-val="{{false}}"><div class="logmask" style="position: absolute; top: 0; bottom: 0; left: 30%; right: 0; overflow: hidden;"><div class="logup" style="font-family: 'Geist Mono', monospace; font-size: 11px; line-height: 2; color: rgba(255,255,255,.045); padding: 0 12px; white-space: nowrap;"><sc-for list="{{logLines}}" as="g" hint-placeholder-count="40"><div>{{g}}</div></sc-for></div></div></sc-if>
+</div>
+
+<header style="position: relative; z-index: 1; border-bottom: 1px solid #1f1f23; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 12px;">
+<a href="#top" style="font-family: 'Geist Mono', monospace; font-size: 14px; font-weight: 500; display: flex; align-items: center; gap: 8px; min-height: 44px;"><span style="color: {{accent}};">&gt;_</span><span>khandev</span></a>
+<nav aria-label="Language" style="display: flex; border: 1px solid #27272a; border-radius: 8px; padding: 3px; gap: 2px; font-family: 'Geist Mono', monospace; font-size: 13px;">
+<a href="#" aria-current="page" style="padding: 8px 10px; border-radius: 5px; background: #1f1f23; color: #fafafa;">en</a>
+<a href="#" style="padding: 8px 10px; border-radius: 5px; color: #a1a1aa;">ru</a>
+<a href="#" style="padding: 8px 10px; border-radius: 5px; color: #a1a1aa;">az</a>
+</nav>
+</header>
+
+<main id="top" style="position: relative; z-index: 1; padding: 0 20px;">
+<section style="padding: 56px 0 48px;">
+<p style="margin: 0 0 22px; font-family: 'Geist Mono', monospace; font-size: 13px; color: #a1a1aa;"><span style="color: {{accent}};">orkhan@khandev</span>:<span style="color: #fafafa;">~</span>$ <span style="color: #fafafa;">{{typed}}</span><span class="{{cursorClass}}" style="display: inline-block; width: 8px; height: 15px; background: {{accent}}; vertical-align: -2px; margin-left: 2px;"></span></p>
+<h1 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 54px; line-height: 0.98; letter-spacing: -0.025em;">Orkhan<br>Ismayilov</h1>
+<p style="margin: 22px 0 0; font-size: 19px; font-weight: 500;">System Administrator</p>
+<p style="margin: 6px 0 0; font-size: 16px; color: #a1a1aa;">Linux, hosting and mail infrastructure - moving into cloud and DevOps.</p>
+<p style="margin: 18px 0 0; font-family: 'Geist Mono', monospace; font-size: 12px; color: #a1a1aa; display: flex; align-items: center; gap: 14px;"><span style="display: inline-flex; align-items: center; gap: 6px;"><span class="{{pulseClass}}" style="width: 7px; height: 7px; border-radius: 50%; background: {{accent}}; display: inline-block;"></span>open to work</span><span>Baku, Azerbaijan</span></p>
+<div style="margin-top: 28px; display: flex; flex-direction: column; gap: 10px;">
+<a href="#" style="display: flex; align-items: center; justify-content: center; gap: 10px; height: 48px; border-radius: 8px; background: {{accent}}; color: #022c22; font-weight: 500;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12"></path><path d="M6 11l6 6 6-6"></path><path d="M5 20h14"></path></svg>Download CV</a>
+<a href="#contact" style="display: flex; align-items: center; justify-content: center; height: 48px; border-radius: 8px; border: 1px solid #27272a; color: #fafafa; font-weight: 500;">Contact</a>
+</div>
+
+</section>
+
+<section style="padding: 48px 0; border-top: 1px solid #1f1f23;">
+<div style="display: flex; align-items: center; gap: 12px; font-family: 'Geist Mono', monospace; font-size: 12px; margin-bottom: 20px;"><span style="color: {{accent}};">$ whoami</span><span style="flex: 1; height: 1px; background: #1f1f23;"></span><span style="color: #a1a1aa;">01</span></div>
+<h2 style="margin: 0 0 16px; font-family: 'Fraunces', serif; font-weight: 400; font-size: 32px; letter-spacing: -0.02em;">About</h2>
+<p style="margin: 0; font-size: 19px; line-height: 1.55; font-weight: 300; color: #a1a1aa;"><span style="color: #fafafa;">I keep servers, websites and mail running.</span> Most recently I administered shared hosting and VPS at a hosting company: migrations, DNS, mail, client issues. Now I'm <span style="color: #fafafa;">systematizing my Linux knowledge</span> on the RHCSA track and learning AWS.</p>
+</section>
+
+<section style="padding: 48px 0; border-top: 1px solid #1f1f23;">
+<div style="display: flex; align-items: center; gap: 12px; font-family: 'Geist Mono', monospace; font-size: 12px; margin-bottom: 20px;"><span style="color: {{accent}};">$ cat experience.log</span><span style="flex: 1; height: 1px; background: #1f1f23;"></span><span style="color: #a1a1aa;">02</span></div>
+<h2 style="margin: 0 0 8px; font-family: 'Fraunces', serif; font-weight: 400; font-size: 32px; letter-spacing: -0.02em;">Experience</h2>
+<sc-for list="{{jobs}}" as="j" hint-placeholder-count="4">
+<article style="padding: 24px 0; border-bottom: 1px solid #1f1f23;">
+<p style="margin: 0 0 8px; font-family: 'Geist Mono', monospace; font-size: 12px; color: #a1a1aa;">{{j.when}}</p>
+<h3 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 24px; line-height: 1.2;">{{j.company}}</h3>
+<p style="margin: 2px 0 0; font-family: 'Geist Mono', monospace; font-size: 13px; color: {{accent}};">{{j.role}}</p>
+<ul style="margin: 14px 0 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px;">
+<sc-for list="{{j.points}}" as="p" hint-placeholder-count="3">
+<li style="display: flex; gap: 10px; color: #d4d4d8;"><span style="color: #52525b; font-family: 'Geist Mono', monospace; flex-shrink: 0;">-</span><span>{{p}}</span></li>
+</sc-for>
+</ul>
+</article>
+</sc-for>
+</section>
+
+<section style="padding: 48px 0; border-top: 1px solid #1f1f23;">
+<div style="display: flex; align-items: center; gap: 12px; font-family: 'Geist Mono', monospace; font-size: 12px; margin-bottom: 20px;"><span style="color: {{accent}};">$ tail -f learning.log</span><span style="flex: 1; height: 1px; background: #1f1f23;"></span><span style="color: #a1a1aa;">03</span></div>
+<h2 style="margin: 0 0 24px; font-family: 'Fraunces', serif; font-weight: 400; font-size: 32px; letter-spacing: -0.02em;">Learning now</h2>
+<div style="border: 1px solid #27272a; border-radius: 12px; background: #0e0e11; overflow: hidden; font-family: 'Geist Mono', monospace; font-size: 13px;">
+<sc-for list="{{learning}}" as="l" hint-placeholder-count="4">
+<div style="padding: 14px 16px; border-bottom: 1px solid #1f1f23;">
+<div style="display: flex; gap: 12px; align-items: baseline;"><span style="color: {{l.color}}; width: 32px; flex-shrink: 0;">[{{l.icon}}]</span><span style="color: #fafafa; font-weight: 500; flex: 1;">{{l.name}}</span><span style="color: {{l.color}}; font-size: 11px;">{{l.status}}</span></div>
+<p style="margin: 4px 0 0 44px; color: #a1a1aa; font-family: 'Geist', sans-serif; font-size: 14px;">{{l.desc}}</p>
+</div>
+</sc-for>
+<div style="padding: 12px 16px; color: #a1a1aa; font-size: 12px;">waiting for new entries<span class="{{cursorClass}}" style="color: {{accent}};"> _</span></div>
+</div>
+</section>
+
+<section style="padding: 48px 0; border-top: 1px solid #1f1f23;">
+<div style="display: flex; align-items: center; gap: 12px; font-family: 'Geist Mono', monospace; font-size: 12px; margin-bottom: 20px;"><span style="color: {{accent}};">$ cat about.txt</span><span style="flex: 1; height: 1px; background: #1f1f23;"></span><span style="color: #a1a1aa;">04</span></div>
+<h2 style="margin: 0 0 24px; font-family: 'Fraunces', serif; font-weight: 400; font-size: 32px; letter-spacing: -0.02em;">Education &amp; languages</h2>
+<div style="display: flex; flex-direction: column; gap: 12px;">
+<div style="border: 1px solid #27272a; border-radius: 12px; padding: 20px;">
+<p style="margin: 0 0 10px; font-family: 'Geist Mono', monospace; font-size: 11px; color: #a1a1aa;">education</p>
+<p style="margin: 0; font-family: 'Fraunces', serif; font-size: 26px;">UNEC</p>
+<p style="margin: 4px 0 0; color: #d4d4d8;">Bachelor's degree, Design</p>
+<p style="margin: 10px 0 0; font-family: 'Geist Mono', monospace; font-size: 12px; color: #a1a1aa;">2020 - 2024</p>
+</div>
+<div style="border: 1px solid #27272a; border-radius: 12px; padding: 20px;">
+<p style="margin: 0 0 6px; font-family: 'Geist Mono', monospace; font-size: 11px; color: #a1a1aa;">languages</p>
+<div style="display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #1f1f23;"><span>Azerbaijani</span><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: {{accent}};">native</span></div>
+<div style="display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #1f1f23;"><span>Russian</span><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: {{accent}};">native</span></div>
+<div style="display: flex; justify-content: space-between; padding: 9px 0;"><span>English</span><span style="font-family: 'Geist Mono', monospace; font-size: 12px; color: #d4d4d8;">C1 · IELTS 7.0</span></div>
+</div>
+</div>
+</section>
+
+<section id="contact" style="padding: 48px 0 64px; border-top: 1px solid #1f1f23;">
+<div style="display: flex; align-items: center; gap: 12px; font-family: 'Geist Mono', monospace; font-size: 12px; margin-bottom: 20px;"><span style="color: {{accent}};">$ ping orkhan</span><span style="flex: 1; height: 1px; background: #1f1f23;"></span><span style="color: #a1a1aa;">05</span></div>
+<h2 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 44px; line-height: 1.05; letter-spacing: -0.025em;">Contact</h2>
+<p style="margin: 14px 0 24px; font-size: 16px; color: #a1a1aa;">Open to system administration, support engineering and cloud / DevOps roles.</p>
+<div style="border: 1px solid #27272a; border-radius: 12px; background: #0e0e11; padding: 16px; font-family: 'Geist Mono', monospace; font-size: 12px; line-height: 2;">
+<div class="{{lnClass}}" style="color: #a1a1aa; animation-delay: .2s;">PING orkhan (khandev.xyz): 3 channels</div>
+<sc-for list="{{contacts}}" as="c" hint-placeholder-count="3">
+<div class="{{lnClass}}" style="display: flex; flex-wrap: wrap; gap: 0 8px; animation-delay: {{c.delay}};"><span style="color: {{accent}}; width: 70px;">{{c.label}}</span><a href="#" style="color: #fafafa; text-decoration: underline; text-decoration-color: #3f3f46; text-underline-offset: 4px;">{{c.value}}</a></div>
+</sc-for>
+<div class="{{lnClass}}" style="color: #a1a1aa; animation-delay: 1.6s;">--- 3 replies, 0% loss ---</div>
+</div>
+<a href="#" style="margin-top: 20px; display: flex; align-items: center; justify-content: center; gap: 10px; height: 48px; border-radius: 8px; background: {{accent}}; color: #022c22; font-weight: 500;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12"></path><path d="M6 11l6 6 6-6"></path><path d="M5 20h14"></path></svg>Download CV</a>
+</section>
+</main>
+
+<footer style="position: relative; z-index: 1; border-top: 1px solid #1f1f23; padding: 20px; display: flex; flex-direction: column; gap: 4px; font-family: 'Geist Mono', monospace; font-size: 11px; color: #a1a1aa;">
+<span>Static site on Cloudflare. Built with Astro.</span>
+<span>© 2026 Orkhan Ismayilov</span>
+</footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#10b981","options":["#10b981","#14b8a6","#f59e0b","#38bdf8"]},"animate":{"editor":"boolean","default":true},"background":{"editor":"enum","options":["log","rain","scanlines","none"],"default":"log"},"$preview":{"width":390,"height":5600}}'>
+class Component extends DCLogic {
+  componentDidMount() {
+    this.full = 'cd ~/devops';
+    var reduce = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+    if (reduce || this.props.animate === false) { this.setState({ n: this.full.length, f: 0 }); return; }
+    this.setState({ n: 0, f: 0 });
+    var self = this;
+    var tick = 0;
+    this.timer = setInterval(function () {
+      tick++;
+      var s = self.state || {};
+      var n = s.n || 0;
+      if (tick > 8 && n < self.full.length && tick % 2 === 0) n++;
+      self.setState({ n: n, f: (s.f || 0) + 1 });
+    }, 90);
+  }
+  componentWillUnmount() { if (this.timer) clearInterval(this.timer); }
+  renderVals() {
+    var accent = this.props.accent ?? '#10b981';
+    var animate = this.props.animate ?? true;
+    var s = this.state || {};
+    var full = 'cd ~/devops';
+    var n = s.n == null ? full.length : s.n;
+    var frames = ['|', '/', '-', '\\'];
+    var spin = animate ? frames[Math.floor((s.f || 0) / 2) % 4] : '~';
+    var bg = this.props.background ?? 'log';
+    var glyphs = '01ABCDEF23456789$>_/:';
+    var rain = [];
+    for (var i = 0; i < 18; i++) {
+      var t = [];
+      for (var j = 0; j < 22; j++) t.push(glyphs.charAt((i * 7 + j * 13 + i * j) % glyphs.length));
+      rain.push({ left: (1.5 + i * 5.5) + '%', text: t.join('\n'), dur: (30 + (i * 7) % 26) + 's', delay: '-' + ((i * 11) % 30) + 's', color: i % 4 === 0 ? accent + '2e' : 'rgba(255,255,255,.05)' });
+    }
+    var base = [
+      'Oct 20 03:00:01 cron[2214]: (root) CMD (/opt/scripts/backup.sh)',
+      'Oct 20 03:00:02 backup: archive created, verifying integrity',
+      'Oct 20 03:00:41 backup: rsync to storage box ok',
+      'Oct 20 03:01:07 systemd[1]: Started logrotate.service',
+      'Oct 20 03:04:12 dovecot: imap-login: Login: user=info@example.az, TLS',
+      'Oct 20 03:04:13 postfix/smtpd[3381]: connect from mail relay',
+      'Oct 20 03:05:55 sshd[4102]: Accepted publickey for moonlever',
+      'Oct 20 03:06:20 kernel: eth0: link up, 1000Mbps, full duplex',
+      'Oct 20 03:07:02 nginx: configuration file test is successful',
+      'Oct 20 03:07:03 systemd[1]: Reloaded nginx.service',
+      'Oct 20 03:09:44 imapsync: 1842 messages transferred, 0 errors',
+      'Oct 20 03:11:18 named: zone khandev.xyz/IN: loaded serial 2026102001',
+      'Oct 20 03:12:30 opendkim: DKIM-Signature field added',
+      'Oct 20 03:14:09 quota: usage within limits on /var/www',
+      'Oct 20 03:15:51 wg-quick: interface wg0 up',
+      'Oct 20 03:17:26 systemd[1]: Started certbot-renew.timer',
+      'Oct 20 03:18:40 docker: container support-desk healthy',
+      'Oct 20 03:20:03 fail2ban: Ban 203.0.113.42',
+      'Oct 20 03:21:15 dnf: Complete! 14 packages upgraded',
+      'Oct 20 03:22:58 systemd[1]: Reached target multi-user.target'
+    ];
+    var half = [];
+    for (var k = 0; k < 9; k++) half = half.concat(base);
+    var logs = half.concat(half);
+    return {
+      accent: accent,
+      typed: full.slice(0, n),
+      cursorClass: animate ? 'blink' : '',
+      pulseClass: animate ? 'pulse' : '',
+      lnClass: animate ? 'ln' : '',
+      stillClass: animate ? '' : 'still',
+      bgScan: bg === 'scanlines',
+      bgRain: bg === 'rain',
+      bgLog: bg === 'log',
+      rainCols: rain,
+      logLines: logs,
+      chips: ['Linux', 'Bash', 'Enhance', 'cPanel', 'WHMCS', 'IMAP', 'DNS', 'Proxmox', 'Docker'],
+      facts: [
+        { k: 'role', v: 'system administrator' },
+        { k: 'os', v: 'linux · rhel · ubuntu' },
+        { k: 'shell', v: 'bash' },
+        { k: 'focus', v: 'hosting, mail, cloud' },
+        { k: 'loc', v: 'baku, az' }
+      ],
+      jobs: [
+        { company: 'Yepika', role: 'System Administrator', when: 'apr 2026 - oct 2026', points: [
+          'Administered shared hosting and VPS on Enhance and cPanel, client accounts and billing in WHMCS',
+          'Migrated websites and mailboxes between servers and providers; solid understanding of IMAP and how mail migration works under the hood',
+          'Configured mail DNS: MX, SPF, DKIM, DMARC',
+          'Linux server administration; Bash scripts for backups, monitoring and bulk operations',
+          'Deployed and configured self-hosted services for the team (support platform, internal tools)',
+          'Set up VPN; handled non-standard tasks outside the main stack'
+        ] },
+        { company: 'Just for Fun', role: 'Support / System Administrator', when: '2025', points: [
+          'Diagnosed, repaired and assembled 50+ gaming workstations',
+          'Maintained the local network and OS deployment across the club',
+          'First line of support for all technical issues on site'
+        ] },
+        { company: 'Azerbaijan Global IT Technology', role: 'Digital Specialist', when: '2025', points: [
+          'Produced visual assets for digital projects',
+          'Internal tech support for staff: software and hardware issues, office connectivity together with the IT department'
+        ] },
+        { company: 'Freelance', role: 'Graphic Designer', when: '2023 - 2026', points: [
+          'Visual communication and layout design for digital projects (Adobe Creative Suite, Figma)'
+        ] }
+      ],
+      stack: [
+        { dir: 'linux', items: ['Ubuntu', 'Fedora', 'RHEL', 'Bash', 'SSH', 'cron'] },
+        { dir: 'hosting', items: ['Enhance', 'cPanel', 'WHMCS'] },
+        { dir: 'mail', items: ['IMAP', 'SMTP', 'imapsync', 'MX', 'SPF', 'DKIM', 'DMARC'] },
+        { dir: 'virtualization', items: ['Proxmox', 'Docker'] },
+        { dir: 'network', items: ['DNS', 'VPN', 'Cloudflare'] }
+      ],
+      learning: [
+        { icon: spin, name: 'RHCSA', desc: 'RHEL 9, Linux administration', status: 'in progress', color: accent },
+        { icon: spin, name: 'AWS', desc: 'Core services, IAM, S3, CloudFront', status: 'in progress', color: accent },
+        { icon: 'ok', name: 'Cloudflare', desc: 'This site runs on Pages and R2', status: 'live', color: accent },
+        { icon: '..', name: 'Next', desc: 'Ansible, Terraform, RHCE', status: 'queued', color: '#a1a1aa' }
+      ],
+      contacts: [
+        { label: 'email', value: '[your email]', delay: '.6s' },
+        { label: 'whatsapp', value: '[whatsapp username]', delay: '1s' },
+        { label: 'github', value: 'github.com/oism1774', delay: '1.3s' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,4 +1,5 @@
 ---
+import StatusDot from './StatusDot.astro';
 import { languages, type Lang } from '../i18n';
 
 interface Props {
@@ -8,28 +9,20 @@ interface Props {
 const { lang } = Astro.props;
 ---
 
-<header class="sticky top-0 z-20 border-b border-border bg-background/80 backdrop-blur">
-  <div class="mx-auto flex h-14 max-w-4xl items-center justify-between px-4 sm:px-6">
-    <a href={`/${lang}/`} class="font-mono text-sm text-foreground">
-      <span class="text-accent">&gt;_</span> khandev
-    </a>
-    <nav class="flex items-center gap-1 rounded-md border border-border p-0.5 font-mono text-xs">
-      {
-        languages.map((l) => (
-          <a
-            href={`/${l}/`}
-            hreflang={l}
-            lang={l}
-            aria-current={l === lang ? 'page' : undefined}
-            class:list={[
-              'rounded px-2.5 py-1 transition-colors',
-              l === lang ? 'bg-accent text-accent-foreground' : 'text-muted hover:bg-secondary hover:text-foreground',
-            ]}
-          >
-            {l.toUpperCase()}
-          </a>
-        ))
-      }
-    </nav>
+<header class="kd-header kd-layer">
+  <div class="kd-container kd-header__inner">
+    <a href="#top" class="kd-logo"><span class="kd-logo__mark">&gt;_</span><span>khandev</span></a>
+    <div class="kd-header__right">
+      <StatusDot />
+      <nav class="kd-lang" aria-label="Language">
+        {
+          languages.map((l) => (
+            <a href={`/${l}/`} hreflang={l} lang={l} aria-current={l === lang ? 'page' : undefined}>
+              {l}
+            </a>
+          ))
+        }
+      </nav>
+    </div>
   </div>
 </header>

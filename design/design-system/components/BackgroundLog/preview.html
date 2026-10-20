@@ -1,0 +1,18 @@
+<!-- @dsCard group="Layout" height=260 -->
+<div class="kd-page" style="position: relative; overflow: hidden; height: 260px;">
+  <div class="kd-bglog" aria-hidden="true" style="left: 35%;">
+    <div class="kd-bglog__track" id="track" style="color: rgba(255,255,255,0.12); animation-duration: 60s;"></div>
+  </div>
+  <div style="position: relative; z-index: 1; padding: 40px 32px;">
+    <p class="kd-serif" style="margin: 0; font-size: 52px; line-height: 1; letter-spacing: -0.025em;">Orkhan<br>Ismayilov</p>
+    <p style="margin: 14px 0 0; color: var(--muted); font-size: 14px;">Log shown brighter here than on the site, to be visible in the card.</p>
+  </div>
+</div>
+<script>
+(function () {
+  var base = ['Oct 20 03:00:01 cron[2214]: (root) CMD (/opt/scripts/backup.sh)', 'Oct 20 03:00:41 backup: rsync to storage box ok', 'Oct 20 03:04:12 dovecot: imap-login: Login: user=info@example.az, TLS', 'Oct 20 03:05:55 sshd[4102]: Accepted publickey for moonlever', 'Oct 20 03:07:03 systemd[1]: Reloaded nginx.service', 'Oct 20 03:11:18 named: zone khandev.xyz/IN: loaded serial 2026102001', 'Oct 20 03:12:30 opendkim: DKIM-Signature field added', 'Oct 20 03:15:51 wg-quick: interface wg0 up', 'Oct 20 03:20:03 fail2ban: Ban 203.0.113.42', 'Oct 20 03:21:15 dnf: Complete! 14 packages upgraded'];
+  var all = base.concat(base, base, base);
+  var t = document.getElementById('track');
+  all.forEach(function (l) { var d = document.createElement('div'); d.textContent = l; t.appendChild(d); });
+})();
+</script>

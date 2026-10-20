@@ -8,6 +8,7 @@ export interface Job {
 export interface Item {
   name: string;
   value: string;
+  native?: boolean;
 }
 
 export interface Dictionary {
@@ -20,9 +21,9 @@ export interface Dictionary {
     cv: string;
     contact: string;
   };
+  // **...** marks key phrases shown in the brighter text colour.
   about: { title: string; text: string };
   experience: { title: string; jobs: Job[] };
-  stack: { title: string; groups: { name: string; tags: string[] }[] };
   learning: { title: string; items: Item[] };
   education: {
     title: string;

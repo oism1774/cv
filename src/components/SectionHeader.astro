@@ -1,0 +1,14 @@
+---
+interface Props {
+  cmd: string;
+  num: string;
+}
+
+const { cmd, num } = Astro.props;
+---
+
+<div class="kd-section-head">
+  <span class="kd-section-head__cmd">{cmd}</span>
+  <span class="kd-section-head__rule" aria-hidden="true"></span>
+  <span class="kd-section-head__num">{num}</span>
+</div>

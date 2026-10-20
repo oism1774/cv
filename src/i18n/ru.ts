@@ -15,7 +15,7 @@ const ru: Dictionary = {
   },
   about: {
     title: 'Обо мне',
-    text: 'Слежу, чтобы серверы, сайты и почта работали. Последнее место - хостинговая компания: администрировал shared hosting и VPS, миграции, DNS, почту, проблемы клиентов. Сейчас систематизирую знания Linux по программе RHCSA и осваиваю AWS.',
+    text: '**Слежу, чтобы серверы, сайты и почта работали.** Последнее место - хостинговая компания: администрировал shared hosting и VPS, миграции, DNS, почту, проблемы клиентов. Сейчас **систематизирую знания Linux** по программе RHCSA и осваиваю AWS.',
   },
   experience: {
     title: 'Опыт',
@@ -34,7 +34,7 @@ const ru: Dictionary = {
         ],
       },
       {
-        company: 'Just for Fun Gaming Club',
+        company: 'Just for Fun',
         role: 'Поддержка / системный администратор',
         period: '2025',
         points: [
@@ -62,16 +62,6 @@ const ru: Dictionary = {
       },
     ],
   },
-  stack: {
-    title: 'Стек',
-    groups: [
-      { name: 'Linux', tags: ['Ubuntu', 'Fedora', 'RHEL', 'Bash', 'SSH', 'cron'] },
-      { name: 'Хостинг', tags: ['Enhance', 'cPanel', 'WHMCS'] },
-      { name: 'Почта', tags: ['IMAP', 'SMTP', 'imapsync', 'MX / SPF / DKIM / DMARC'] },
-      { name: 'Виртуализация', tags: ['Proxmox', 'Docker'] },
-      { name: 'Сеть', tags: ['DNS', 'VPN', 'Cloudflare'] },
-    ],
-  },
   learning: {
     title: 'Сейчас изучаю',
     items: [
@@ -87,9 +77,9 @@ const ru: Dictionary = {
     degree: 'бакалавр, дизайн',
     period: '2020 - 2024',
     languages: [
-      { name: 'Азербайджанский', value: 'родной' },
-      { name: 'Русский', value: 'родной' },
-      { name: 'Английский', value: 'B2 (IELTS 7.0)' },
+      { name: 'Азербайджанский', value: 'родной', native: true },
+      { name: 'Русский', value: 'родной', native: true },
+      { name: 'Английский', value: 'C1 (IELTS 7.0)' },
     ],
   },
   contact: {

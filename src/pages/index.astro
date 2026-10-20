@@ -1,5 +1,6 @@
 ---
 // Fallback for hosts without _redirects support (e.g. R2).
+import { color } from '../styles/tokens';
 ---
 
 <!doctype html>
@@ -12,7 +13,7 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <title>khandev.xyz</title>
   </head>
-  <body style="background:#09090b">
-    <a href="/en/" style="color:#10b981;font-family:monospace">/en/</a>
+  <body style={`background:${color('bg')}`}>
+    <a href="/en/" style={`color:${color('accent')};font-family:monospace`}>/en/</a>
   </body>
 </html>

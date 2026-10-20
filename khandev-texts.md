@@ -32,7 +32,7 @@ Apr 2026 - Oct 2026
 - Deployed and configured self-hosted services for the team (support platform, internal tools)
 - Set up VPN; handled non-standard tasks outside the main stack
 
-**Just for Fun Gaming Club** - Support / System Administrator
+**Just for Fun** - Support / System Administrator
 2025
 - Diagnosed, repaired and assembled 50+ gaming workstations
 - Maintained the local network and OS deployment across the club
@@ -47,12 +47,6 @@ Apr 2026 - Oct 2026
 2023 - 2026
 - Visual communication and layout design for digital projects (Adobe Creative Suite, Figma)
 
-### Stack - `$ ls ~/stack`
-- **Linux** - Ubuntu, Fedora, RHEL, Bash, SSH, cron
-- **Hosting** - Enhance, cPanel, WHMCS
-- **Mail** - IMAP, SMTP, imapsync, MX / SPF / DKIM / DMARC
-- **Virtualization** - Proxmox, Docker
-- **Network** - DNS, VPN, Cloudflare
 
 ### Learning now - `$ tail -f learning.log`
 - **RHCSA** - RHEL 9, Linux administration
@@ -62,10 +56,10 @@ Apr 2026 - Oct 2026
 
 ### Education & languages - `$ cat about.txt`
 **UNEC** - Bachelor's degree, Design · 2020 - 2024
-Azerbaijani - native · Russian - native · English - B2 (IELTS 7.0)
+Azerbaijani - native · Russian - native · English - C1 (IELTS 7.0)
 
 ### Contact - `$ ping orkhan`
-Open to system administration, support engineering and junior cloud / DevOps-adjacent roles.
+Open to system administration, support engineering and cloud / DevOps roles.
 Email · WhatsApp · GitHub
 
 ### Footer
@@ -97,7 +91,7 @@ Linux, хостинг и почтовая инфраструктура - дви�
 - Разворачивал и настраивал self-hosted сервисы для команды (платформа поддержки, внутренние инструменты)
 - Настройка VPN; решение нестандартных задач за пределами основного стека
 
-**Just for Fun Gaming Club** - Поддержка / системный администратор
+**Just for Fun** - Поддержка / системный администратор
 2025
 - Диагностика, ремонт и сборка 50+ игровых станций
 - Обслуживание локальной сети и развёртывание ОС по клубу
@@ -112,12 +106,6 @@ Linux, хостинг и почтовая инфраструктура - дви�
 2023 - 2026
 - Визуальная коммуникация и вёрстка макетов для цифровых проектов (Adobe Creative Suite, Figma)
 
-### Стек
-- **Linux** - Ubuntu, Fedora, RHEL, Bash, SSH, cron
-- **Хостинг** - Enhance, cPanel, WHMCS
-- **Почта** - IMAP, SMTP, imapsync, MX / SPF / DKIM / DMARC
-- **Виртуализация** - Proxmox, Docker
-- **Сеть** - DNS, VPN, Cloudflare
 
 ### Сейчас изучаю
 - **RHCSA** - RHEL 9, администрирование Linux
@@ -127,7 +115,7 @@ Linux, хостинг и почтовая инфраструктура - дви�
 
 ### Образование и языки
 **UNEC** - бакалавр, дизайн · 2020 - 2024
-Азербайджанский - родной · Русский - родной · Английский - B2 (IELTS 7.0)
+Азербайджанский - родной · Русский - родной · Английский - C1 (IELTS 7.0)
 
 ### Контакты
 Открыт к позициям в системном администрировании, техподдержке и cloud / DevOps.
@@ -162,7 +150,7 @@ Apr 2026 - Okt 2026
 - Komanda üçün self-hosted xidmətlərin qurulması və konfiqurasiyası (dəstək platforması, daxili alətlər)
 - VPN qurulması; əsas stekdən kənar qeyri-standart tapşırıqların həlli
 
-**Just for Fun Gaming Club** - Dəstək / sistem administratoru
+**Just for Fun** - Dəstək / sistem administratoru
 2025
 - 50+ oyun kompüterinin diaqnostikası, təmiri və yığılması
 - Klubun lokal şəbəkəsinə qulluq və əməliyyat sistemlərinin quraşdırılması
@@ -177,12 +165,6 @@ Apr 2026 - Okt 2026
 2023 - 2026
 - Rəqəmsal layihələr üçün vizual kommunikasiya və maket dizaynı (Adobe Creative Suite, Figma)
 
-### Stek
-- **Linux** - Ubuntu, Fedora, RHEL, Bash, SSH, cron
-- **Hostinq** - Enhance, cPanel, WHMCS
-- **Email** - IMAP, SMTP, imapsync, MX / SPF / DKIM / DMARC
-- **Virtualizasiya** - Proxmox, Docker
-- **Şəbəkə** - DNS, VPN, Cloudflare
 
 ### Hazırda öyrənirəm
 - **RHCSA** - RHEL 9, Linux administrasiyası
@@ -192,7 +174,7 @@ Apr 2026 - Okt 2026
 
 ### Təhsil və dillər
 **UNEC** - bakalavr, dizayn · 2020 - 2024
-Azərbaycan dili - ana dili · Rus dili - ana dili · İngilis dili - B2 (IELTS 7.0)
+Azərbaycan dili - ana dili · Rus dili - ana dili · İngilis dili - C1 (IELTS 7.0)
 
 ### Əlaqə
 Sistem administrasiyası, texniki dəstək və cloud / DevOps vəzifələrinə açığam.

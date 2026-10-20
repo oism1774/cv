@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import { tokenCss, color } from '../styles/tokens';
+import BackgroundLog from '../components/BackgroundLog.astro';
 import { SITE_URL } from '../config';
 import { languages, ogLocales, type Lang } from '../i18n';
 
@@ -20,7 +22,7 @@ const url = `${SITE_URL}/${lang}/`;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#09090b" />
+    <meta name="theme-color" content={color('bg')} />
     <link rel="canonical" href={url} />
     {languages.map((l) => <link rel="alternate" hreflang={l} href={`${SITE_URL}/${l}/`} />)}
     <link rel="alternate" hreflang="x-default" href={`${SITE_URL}/en/`} />
@@ -42,10 +44,14 @@ const url = `${SITE_URL}/${lang}/`;
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Geist+Mono:wght@400..500&family=Geist:wght@400..600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..600&family=Geist:wght@300..600&family=Geist+Mono:wght@400;500&display=swap"
     />
+    <style is:global set:html={tokenCss}></style>
   </head>
-  <body class="min-h-screen overflow-x-hidden">
-    <slot />
+  <body>
+    <div class="kd-root">
+      <BackgroundLog />
+      <slot />
+    </div>
   </body>
 </html>

@@ -2,20 +2,10 @@
 import type { HTMLAttributes } from 'astro/types';
 
 interface Props extends HTMLAttributes<'a'> {
-  variant?: 'primary' | 'secondary';
+  variant?: 'primary' | 'outline';
 }
 
-const { variant = 'primary', ...attrs } = Astro.props;
+const { variant = 'primary', class: className, ...attrs } = Astro.props;
 ---
 
-<a
-  {...attrs}
-  class:list={[
-    'inline-flex h-10 items-center justify-center gap-2 rounded-md px-5 text-sm font-medium transition-colors',
-    variant === 'primary'
-      ? 'bg-accent text-accent-foreground hover:bg-accent/90'
-      : 'border border-border bg-background text-foreground hover:bg-secondary',
-  ]}
->
-  <slot />
-</a>
+<a {...attrs} class:list={['kd-btn', `kd-btn--${variant}`, className]}><slot /></a>

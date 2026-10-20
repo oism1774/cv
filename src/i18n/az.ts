@@ -15,7 +15,7 @@ const az: Dictionary = {
   },
   about: {
     title: 'Haqqımda',
-    text: 'Serverlərin, saytların və email-in fasiləsiz işləməsini təmin edirəm. Son iş yerim hostinq şirkəti olub: shared hosting və VPS administrasiyası, miqrasiyalar, DNS, email, müştəri problemləri. Hazırda RHCSA proqramı üzrə Linux biliklərimi sistemləşdirirəm və AWS-i mənimsəyirəm.',
+    text: '**Serverlərin, saytların və email-in fasiləsiz işləməsini təmin edirəm.** Son iş yerim hostinq şirkəti olub: shared hosting və VPS administrasiyası, miqrasiyalar, DNS, email, müştəri problemləri. Hazırda RHCSA proqramı üzrə **Linux biliklərimi sistemləşdirirəm** və AWS-i mənimsəyirəm.',
   },
   experience: {
     title: 'Təcrübə',
@@ -34,7 +34,7 @@ const az: Dictionary = {
         ],
       },
       {
-        company: 'Just for Fun Gaming Club',
+        company: 'Just for Fun',
         role: 'Dəstək / sistem administratoru',
         period: '2025',
         points: [
@@ -62,16 +62,6 @@ const az: Dictionary = {
       },
     ],
   },
-  stack: {
-    title: 'Stek',
-    groups: [
-      { name: 'Linux', tags: ['Ubuntu', 'Fedora', 'RHEL', 'Bash', 'SSH', 'cron'] },
-      { name: 'Hostinq', tags: ['Enhance', 'cPanel', 'WHMCS'] },
-      { name: 'Email', tags: ['IMAP', 'SMTP', 'imapsync', 'MX / SPF / DKIM / DMARC'] },
-      { name: 'Virtualizasiya', tags: ['Proxmox', 'Docker'] },
-      { name: 'Şəbəkə', tags: ['DNS', 'VPN', 'Cloudflare'] },
-    ],
-  },
   learning: {
     title: 'Hazırda öyrənirəm',
     items: [
@@ -87,9 +77,9 @@ const az: Dictionary = {
     degree: 'bakalavr, dizayn',
     period: '2020 - 2024',
     languages: [
-      { name: 'Azərbaycan dili', value: 'ana dili' },
-      { name: 'Rus dili', value: 'ana dili' },
-      { name: 'İngilis dili', value: 'B2 (IELTS 7.0)' },
+      { name: 'Azərbaycan dili', value: 'ana dili', native: true },
+      { name: 'Rus dili', value: 'ana dili', native: true },
+      { name: 'İngilis dili', value: 'C1 (IELTS 7.0)' },
     ],
   },
   contact: {
