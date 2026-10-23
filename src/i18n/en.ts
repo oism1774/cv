@@ -15,7 +15,7 @@ const en: Dictionary = {
   },
   about: {
     title: 'About',
-    text: "**I run Linux servers, hosting and email.** Most recently I administered shared hosting and VPS at a hosting company - migrations, DNS, mail and client issues. Now I'm **deepening my Linux skills** on the RHCSA track and learning AWS.",
+    text: "**I'm a system administrator working with Linux servers, websites and email.** I'm at my best with **unusual, non-typical tasks** - I can figure things out along the way and see a task through to the result. At a hosting company I worked with hundreds of client websites and mailboxes, from daily support to large migrations. Now I'm preparing for RHCSA and learning cloud - moving toward DevOps.",
   },
   experience: {
     title: 'Experience',
@@ -25,12 +25,10 @@ const en: Dictionary = {
         role: 'System Administrator',
         period: 'Apr 2026 - Oct 2026',
         points: [
-          'Administered shared hosting and VPS on Enhance and cPanel, client accounts and billing in WHMCS',
-          'Migrated websites and mailboxes between servers and providers; solid understanding of IMAP and how mail migration works under the hood',
-          'Configured mail DNS: MX, SPF, DKIM, DMARC',
-          'Linux server administration; Bash scripts for backups, monitoring and bulk operations',
-          'Deployed and configured self-hosted services for the team (support platform, internal tools)',
-          'Set up VPN; handled non-standard tasks outside the main stack',
+          'Administered hosting infrastructure for a couple of hundred clients: VPS, as well as web, mail and backup servers on Enhance and cPanel; accounts and billing in WHMCS',
+          'Automated the migration of a huge corporate mail workspace with hundreds of mailboxes; worked with IMAP and SMTP protocols; configured mail DNS (MX, SPF, DKIM, DMARC)',
+          'Wrote automation scripts for backups, monitoring and bulk operations on Linux servers',
+          'Deployed self-hosted services for the office and clients (support platform, internal tools), set up VPN and solved non-standard tasks outside the main stack',
         ],
       },
       {
@@ -38,8 +36,7 @@ const en: Dictionary = {
         role: 'Support / System Administrator',
         period: '2025',
         points: [
-          'Diagnosed, repaired and assembled 50+ gaming workstations',
-          'Maintained the local network and OS deployment across the club',
+          'Diagnosed, repaired and assembled 50+ gaming workstations; maintained the network and deployed operating systems',
           'First line of support for all technical issues on site',
         ],
       },
@@ -49,15 +46,7 @@ const en: Dictionary = {
         period: '2025',
         points: [
           'Produced visual assets for digital projects',
-          'Internal tech support for staff: software and hardware issues, office connectivity together with the IT department',
-        ],
-      },
-      {
-        company: 'Freelance',
-        role: 'Graphic Designer',
-        period: '2023 - 2026',
-        points: [
-          'Visual communication and layout design for digital projects (Adobe Creative Suite, Figma)',
+          'Internal tech support for staff: software, hardware and office connectivity together with the IT department',
         ],
       },
     ],
@@ -67,7 +56,7 @@ const en: Dictionary = {
     items: [
       { name: 'RHCSA', value: 'RHEL 9, Linux administration' },
       { name: 'AWS', value: 'core services, IAM, S3, CloudFront' },
-      { name: 'Cloudflare', value: 'this site runs on Pages and R2' },
+      { name: 'Cloudflare', value: 'this site runs on Workers & Pages' },
       { name: 'Next', value: 'Ansible, Terraform, RHCE' },
     ],
   },
@@ -79,7 +68,7 @@ const en: Dictionary = {
     languages: [
       { name: 'Azerbaijani', value: 'native', native: true },
       { name: 'Russian', value: 'native', native: true },
-      { name: 'English', value: 'C1 (IELTS 7.0)' },
+      { name: 'English', value: 'C1 · IELTS 7.0' },
     ],
   },
   contact: {

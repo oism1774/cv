@@ -10,12 +10,12 @@ const az: Dictionary = {
     role: 'Sistem administratoru',
     tagline: 'Linux, hostinq və email infrastrukturu - cloud və DevOps istiqamətində inkişaf edirəm.',
     location: 'Bakı, Azərbaycan',
-    cv: 'CV-ni yüklə',
+    cv: 'CVni yüklə',
     contact: 'Əlaqə',
   },
   about: {
     title: 'Haqqımda',
-    text: "**Linux serverlərini, hostinqi və email-i idarə edirəm.** Son iş yerim hostinq şirkəti olub: shared hosting və VPS, miqrasiyalar, DNS, email və müştəri məsələləri. Hazırda RHCSA proqramı üzrə **Linux biliklərimi dərinləşdirirəm** və AWS öyrənirəm.",
+    text: "**Sistem administratoruyam. Linux serverləri, saytlar və email ilə işləyirəm.** Mənim güclü tərəfim **qeyri-standart problemləri çevik şəkildə həll etməkdir.** Son iş yerimdə - hostinq şirkətində - çoxlu müştərinin websaytlarını və emaillərini idarə edirdim: sadə gündəlik suallardan başlamış yüzlərlə email olan workspace miqrasiyasına qədər. Hazırda RHCSA keçirəm, cloud öyrənirəm və DevOps istiqamətində inkişaf edirəm.",
   },
   experience: {
     title: 'Təcrübə',
@@ -25,12 +25,10 @@ const az: Dictionary = {
         role: 'Sistem administratoru',
         period: 'Apr 2026 - Okt 2026',
         points: [
-          'Enhance və cPanel üzərində shared hosting və VPS administrasiyası, WHMCS-də müştəri hesabları və billinq',
-          'Saytların və email qutularının serverlər və provayderlər arasında miqrasiyası; IMAP protokolunu və email miqrasiyasının daxili iş prinsipini yaxşı bilirəm',
-          'Email DNS qeydlərinin qurulması: MX, SPF, DKIM, DMARC',
-          'Linux serverlərinin administrasiyası; backup, monitorinq və kütləvi əməliyyatlar üçün Bash skriptləri',
-          'Komanda üçün self-hosted xidmətlərin qurulması və konfiqurasiyası (dəstək platforması, daxili alətlər)',
-          'VPN qurulması; əsas stekdən kənar qeyri-standart tapşırıqların həlli',
+          'Yüzlərlə müştəri üçün hostinq infrastrukturunun administrasiyası: Enhance və cPanel üzərində web, email və backup serverləri, VPS; WHMCS üzərində hesablar və billinq',
+          'Yüzlərlə qutudan ibarət böyük korporativ email mühitinin avtomatlaşdırılmış şəkildə miqrasiyası; IMAP və SMTP protokolları ilə iş; email DNS qeydlərinin qurulması (MX, SPF, DKIM, DMARC)',
+          'Linux serverlərində backup, monitorinq və kütləvi əməliyyatlar üçün avtomatlaşdırma skriptlərinin yazılması',
+          'Ofis və müştərilər üçün self-hosted xidmətlərin qurulması (dəstək platforması, daxili alətlər), VPN konfiqurasiyası və əsas stekdən kənar qeyri-standart tapşırıqların həlli',
         ],
       },
       {
@@ -38,8 +36,7 @@ const az: Dictionary = {
         role: 'Dəstək / sistem administratoru',
         period: '2025',
         points: [
-          '50+ oyun kompüterinin diaqnostikası, təmiri və yığılması',
-          'Klubun lokal şəbəkəsinə qulluq və əməliyyat sistemlərinin quraşdırılması',
+          '50+ oyun kompüterinin diaqnostikası, təmiri və yığılması; şəbəkəyə qulluq və əməliyyat sistemlərinin quraşdırılması',
           'Yerində bütün texniki məsələlər üzrə birinci xətt dəstəyi',
         ],
       },
@@ -52,14 +49,6 @@ const az: Dictionary = {
           'Əməkdaşlar üçün daxili texniki dəstək: proqram təminatı, avadanlıq, IT şöbəsi ilə birlikdə ofis şəbəkəsi',
         ],
       },
-      {
-        company: 'Frilans',
-        role: 'Qrafik dizayner',
-        period: '2023 - 2026',
-        points: [
-          'Rəqəmsal layihələr üçün vizual kommunikasiya və maket dizaynı (Adobe Creative Suite, Figma)',
-        ],
-      },
     ],
   },
   learning: {
@@ -67,19 +56,19 @@ const az: Dictionary = {
     items: [
       { name: 'RHCSA', value: 'RHEL 9, Linux administrasiyası' },
       { name: 'AWS', value: 'əsas xidmətlər, IAM, S3, CloudFront' },
-      { name: 'Cloudflare', value: 'bu sayt Pages və R2 üzərində işləyir' },
+      { name: 'Cloudflare', value: 'bu sayt Workers & Pages üzərində işləyir' },
       { name: 'Növbəti', value: 'Ansible, Terraform, RHCE' },
     ],
   },
   education: {
     title: 'Təhsil və dillər',
     school: 'UNEC',
-    degree: 'bakalavr, dizayn',
+    degree: 'Bakalavr, dizayn',
     period: '2020 - 2024',
     languages: [
       { name: 'Azərbaycan dili', value: 'ana dili', native: true },
       { name: 'Rus dili', value: 'ana dili', native: true },
-      { name: 'İngilis dili', value: 'C1 (IELTS 7.0)' },
+      { name: 'İngilis dili', value: 'C1 · IELTS 7.0' },
     ],
   },
   contact: {
