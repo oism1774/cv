@@ -15,7 +15,7 @@ const en: Dictionary = {
   },
   about: {
     title: 'About',
-    text: "**I'm a system administrator working with Linux servers, websites and email.** I do my best work on **unusual, non-standard problems** - I figure things out on the fly and see them through to the end. At a hosting company I looked after hundreds of client websites and mailboxes, from everyday support to large migrations. Now I'm preparing for RHCSA and learning cloud, moving toward DevOps.",
+    text: "**I'm a system administrator working with Linux servers, websites and email.** I'm at my best with **unusual, non-typical tasks** - I can figure things out along the way and see a task through to the result. At a hosting company I worked with hundreds of client websites and mailboxes, from daily support to large migrations. Now I'm preparing for RHCSA and learning cloud - moving toward DevOps.",
   },
   experience: {
     title: 'Experience',
