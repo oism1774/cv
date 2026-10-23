@@ -63,7 +63,7 @@ const az: Dictionary = {
   education: {
     title: 'Təhsil və dillər',
     school: 'UNEC',
-    degree: 'bakalavr, dizayn',
+    degree: 'Bakalavr, dizayn',
     period: '2020 - 2024',
     languages: [
       { name: 'Azərbaycan dili', value: 'ana dili', native: true },

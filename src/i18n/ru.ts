@@ -63,7 +63,7 @@ const ru: Dictionary = {
   education: {
     title: 'Образование и языки',
     school: 'UNEC',
-    degree: 'бакалавр, дизайн',
+    degree: 'Бакалавр, дизайн',
     period: '2020 - 2024',
     languages: [
       { name: 'Азербайджанский', value: 'родной', native: true },
