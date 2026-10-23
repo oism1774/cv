@@ -15,7 +15,7 @@ const az: Dictionary = {
   },
   about: {
     title: 'Haqqımda',
-    text: "**Linux serverlərini, hostinqi və email-i idarə edirəm.** Son iş yerim hostinq şirkəti olub: shared hosting və VPS, miqrasiyalar, DNS, email və müştəri məsələləri. Hazırda RHCSA proqramı üzrə **Linux biliklərimi dərinləşdirirəm** və AWS öyrənirəm.",
+    text: "**Sistem administratoruyam. Linux serverləri, saytlar və email ilə işləyirəm.** Mənim güclü tərəfim **qeyri-standart problemləri çevik şəkildə həll etməkdir.** Son iş yerimdə - hostinq şirkətində - çoxlu müştərinin veb-saytlarını və email-lərini idarə edirdim: sadə gündəlik suallardan başlamış yüzlərlə email olan workspace-in miqrasiyasına qədər. Hazırda RHCSA keçirəm, cloud öyrənirəm və DevOps istiqamətində inkişaf edirəm.",
   },
   experience: {
     title: 'Təcrübə',
@@ -25,12 +25,10 @@ const az: Dictionary = {
         role: 'Sistem administratoru',
         period: 'Apr 2026 - Okt 2026',
         points: [
-          'Enhance və cPanel üzərində shared hosting və VPS administrasiyası, WHMCS-də müştəri hesabları və billinq',
-          'Saytların və email qutularının serverlər və provayderlər arasında miqrasiyası; IMAP protokolunu və email miqrasiyasının daxili iş prinsipini yaxşı bilirəm',
-          'Email DNS qeydlərinin qurulması: MX, SPF, DKIM, DMARC',
-          'Linux serverlərinin administrasiyası; backup, monitorinq və kütləvi əməliyyatlar üçün Bash skriptləri',
-          'Komanda üçün self-hosted xidmətlərin qurulması və konfiqurasiyası (dəstək platforması, daxili alətlər)',
-          'VPN qurulması; əsas stekdən kənar qeyri-standart tapşırıqların həlli',
+          'Yüzlərlə müştəri üçün hostinq infrastrukturunun administrasiyası: Enhance və cPanel üzərində web, email və backup serverləri, VPS; WHMCS-də hesablar və billinq',
+          'Yüzlərlə qutudan ibarət böyük korporativ email mühitinin avtomatlaşdırılmış şəkildə miqrasiyası; IMAP və SMTP protokolları ilə iş; email DNS qeydlərinin qurulması (MX, SPF, DKIM, DMARC)',
+          'Linux serverlərində backup, monitorinq və kütləvi əməliyyatlar üçün avtomatlaşdırılma skriptlərinin yazılması',
+          'Ofis və müştəri üçün self-hosted xidmətlərin qurulması (dəstək platforması, daxili alətlər), VPN konfiqurasiyası və əsas stekdən kənar qeyri-standart tapşırıqların həlli',
         ],
       },
       {
@@ -38,8 +36,7 @@ const az: Dictionary = {
         role: 'Dəstək / sistem administratoru',
         period: '2025',
         points: [
-          '50+ oyun kompüterinin diaqnostikası, təmiri və yığılması',
-          'Klubun lokal şəbəkəsinə qulluq və əməliyyat sistemlərinin quraşdırılması',
+          '50+ oyun kompüterinin diaqnostikası, təmiri və yığılması; şəbəkəyə qulluq və əməliyyat sistemlərinin quraşdırılması',
           'Yerində bütün texniki məsələlər üzrə birinci xətt dəstəyi',
         ],
       },
@@ -50,14 +47,6 @@ const az: Dictionary = {
         points: [
           'Rəqəmsal layihələr üçün vizual materiallar',
           'Əməkdaşlar üçün daxili texniki dəstək: proqram təminatı, avadanlıq, IT şöbəsi ilə birlikdə ofis şəbəkəsi',
-        ],
-      },
-      {
-        company: 'Frilans',
-        role: 'Qrafik dizayner',
-        period: '2023 - 2026',
-        points: [
-          'Rəqəmsal layihələr üçün vizual kommunikasiya və maket dizaynı (Adobe Creative Suite, Figma)',
         ],
       },
     ],
