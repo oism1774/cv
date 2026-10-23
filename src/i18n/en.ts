@@ -15,7 +15,7 @@ const en: Dictionary = {
   },
   about: {
     title: 'About',
-    text: "**I'm a system administrator working with Linux servers, websites and email.** I'm at my best with **unusual, non-typical tasks** - I can figure things out along the way and see a task through to the result. At a hosting company I worked with hundreds of client websites and mailboxes, from daily support to large migrations. Now I'm going through RHCSA and learning cloud - moving toward DevOps.",
+    text: "**I'm a system administrator working with Linux servers, websites and email.** I do my best work on **unusual, non-standard problems** - I figure things out on the fly and see them through to the end. At a hosting company I looked after hundreds of client websites and mailboxes, from everyday support to large migrations. Now I'm preparing for RHCSA and learning cloud, moving toward DevOps.",
   },
   experience: {
     title: 'Experience',
@@ -36,7 +36,7 @@ const en: Dictionary = {
         role: 'Support / System Administrator',
         period: '2025',
         points: [
-          'Diagnosed, repaired and assembled 50+ gaming workstations; maintained the network and OS deployment',
+          'Diagnosed, repaired and assembled 50+ gaming workstations; maintained the network and deployed operating systems',
           'First line of support for all technical issues on site',
         ],
       },
@@ -56,7 +56,7 @@ const en: Dictionary = {
     items: [
       { name: 'RHCSA', value: 'RHEL 9, Linux administration' },
       { name: 'AWS', value: 'core services, IAM, S3, CloudFront' },
-      { name: 'Cloudflare', value: 'this site runs on Pages and R2' },
+      { name: 'Cloudflare', value: 'this site runs on Workers & Pages' },
       { name: 'Next', value: 'Ansible, Terraform, RHCE' },
     ],
   },
@@ -68,7 +68,7 @@ const en: Dictionary = {
     languages: [
       { name: 'Azerbaijani', value: 'native', native: true },
       { name: 'Russian', value: 'native', native: true },
-      { name: 'English', value: 'C1 (IELTS 7.0)' },
+      { name: 'English', value: 'C1 · IELTS 7.0' },
     ],
   },
   contact: {

@@ -15,7 +15,7 @@ const az: Dictionary = {
   },
   about: {
     title: 'Haqqımda',
-    text: "**Sistem administratoruyam. Linux serverləri, saytlar və email ilə işləyirəm.** Mənim güclü tərəfim **qeyri-standart problemləri çevik şəkildə həll etməkdir.** Son iş yerimdə - hostinq şirkətində - çoxlu müştərinin websaytlarını və emaillərini idarə edirdim: sadə gündəlik suallardan başlamış yüzlərlə email olan workspacein miqrasiyasına qədər. Hazırda RHCSA keçirəm, cloud öyrənirəm və DevOps istiqamətində inkişaf edirəm.",
+    text: "**Sistem administratoruyam. Linux serverləri, saytlar və email ilə işləyirəm.** Mənim güclü tərəfim **qeyri-standart problemləri çevik şəkildə həll etməkdir.** Son iş yerimdə - hostinq şirkətində - çoxlu müştərinin websaytlarını və emaillərini idarə edirdim: sadə gündəlik suallardan başlamış yüzlərlə email olan workspace miqrasiyasına qədər. Hazırda RHCSA keçirəm, cloud öyrənirəm və DevOps istiqamətində inkişaf edirəm.",
   },
   experience: {
     title: 'Təcrübə',
@@ -25,10 +25,10 @@ const az: Dictionary = {
         role: 'Sistem administratoru',
         period: 'Apr 2026 - Okt 2026',
         points: [
-          'Yüzlərlə müştəri üçün hostinq infrastrukturunun administrasiyası: Enhance və cPanel üzərində web, email və backup serverləri, VPS; WHMCSdə hesablar və billinq',
+          'Yüzlərlə müştəri üçün hostinq infrastrukturunun administrasiyası: Enhance və cPanel üzərində web, email və backup serverləri, VPS; WHMCS üzərində hesablar və billinq',
           'Yüzlərlə qutudan ibarət böyük korporativ email mühitinin avtomatlaşdırılmış şəkildə miqrasiyası; IMAP və SMTP protokolları ilə iş; email DNS qeydlərinin qurulması (MX, SPF, DKIM, DMARC)',
-          'Linux serverlərində backup, monitorinq və kütləvi əməliyyatlar üçün avtomatlaşdırılma skriptlərinin yazılması',
-          'Ofis və müştəri üçün self-hosted xidmətlərin qurulması (dəstək platforması, daxili alətlər), VPN konfiqurasiyası və əsas stekdən kənar qeyri-standart tapşırıqların həlli',
+          'Linux serverlərində backup, monitorinq və kütləvi əməliyyatlar üçün avtomatlaşdırma skriptlərinin yazılması',
+          'Ofis və müştərilər üçün self-hosted xidmətlərin qurulması (dəstək platforması, daxili alətlər), VPN konfiqurasiyası və əsas stekdən kənar qeyri-standart tapşırıqların həlli',
         ],
       },
       {
@@ -56,7 +56,7 @@ const az: Dictionary = {
     items: [
       { name: 'RHCSA', value: 'RHEL 9, Linux administrasiyası' },
       { name: 'AWS', value: 'əsas xidmətlər, IAM, S3, CloudFront' },
-      { name: 'Cloudflare', value: 'bu sayt Pages və R2 üzərində işləyir' },
+      { name: 'Cloudflare', value: 'bu sayt Workers & Pages üzərində işləyir' },
       { name: 'Növbəti', value: 'Ansible, Terraform, RHCE' },
     ],
   },
@@ -68,7 +68,7 @@ const az: Dictionary = {
     languages: [
       { name: 'Azərbaycan dili', value: 'ana dili', native: true },
       { name: 'Rus dili', value: 'ana dili', native: true },
-      { name: 'İngilis dili', value: 'C1 (IELTS 7.0)' },
+      { name: 'İngilis dili', value: 'C1 · IELTS 7.0' },
     ],
   },
   contact: {
