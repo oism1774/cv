@@ -1,12 +1,12 @@
 # khandev.xyz
 
-Одностраничный сайт-визитка на Astro + Tailwind CSS. Три языка: `/en/`, `/ru/`, `/az/`.
+Одностраничный сайт-визитка на Astro + Tailwind CSS. Три языка: `/az/`, `/ru/`, `/en/`.
 
 ## Локально
 
 ```bash
 npm install
-npm run dev      # http://localhost:4321/en/
+npm run dev      # http://localhost:4321/az/
 npm run build    # сборка статики
 npm run preview  # просмотр собранной версии
 ```
@@ -17,4 +17,4 @@ npm run preview  # просмотр собранной версии
 - Тексты — `src/i18n/en.ts`, `ru.ts`, `az.ts`; общие терминальные подписи — `src/i18n/common.ts`.
 - Контакты — `src/config.ts` (пустое значение = ссылка скрыта).
 - CV — `public/cv/orkhan-ismayilov-cv-{en,ru,az}.pdf`.
-- Редирект `/` → `/en/`: `public/_redirects` (Pages) и meta refresh в `dist/index.html` (R2).
+- Редирект `/` → `/az/`: `public/_redirects` (Pages) и meta refresh в `dist/index.html` (R2).

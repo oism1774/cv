@@ -1,0 +1,30 @@
+---
+import { serviceMeta } from '../i18n/common';
+import type { Dictionary } from '../i18n/types';
+
+interface Props {
+  items: Dictionary['services']['items'];
+}
+
+const { items } = Astro.props;
+---
+
+<div class="kd-svc">
+  {
+    items.map((item, i) => (
+      <article class="kd-svc__item">
+        <div class="kd-svc__top">
+          <span>{String(i + 1).padStart(2, '0')} / {String(items.length).padStart(2, '0')}</span>
+          <span class="kd-svc__code">{serviceMeta[i].code}</span>
+        </div>
+        <h3 class="kd-svc__title">{item.title}</h3>
+        <ul class="kd-points">
+          {item.points.map((p) => <li>{p}</li>)}
+        </ul>
+        <div class="kd-chips">
+          {serviceMeta[i].chips.map((c) => <span class="kd-chip">{c}</span>)}
+        </div>
+      </article>
+    ))
+  }
+</div>

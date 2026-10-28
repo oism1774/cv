@@ -1,31 +1,46 @@
-// Terminal decoration: identical (English) in every language.
-export const prompt = { user: 'orkhan@khandev', path: '~', command: 'cd ~/devops' };
+export const prompt = { user: 'orkhan@khandev', path: '~', command: 'cd ~/sysadmin' };
 
 export const sections = {
   about: { cmd: '$ whoami', num: '01' },
-  experience: { cmd: '$ cat experience.log', num: '02' },
-  learning: { cmd: '$ tail -f learning.log', num: '03' },
-  education: { cmd: '$ cat about.txt', num: '04' },
-  contact: { cmd: '$ ping orkhan', num: '05' },
+  services: { cmd: '$ ls services/', num: '02' },
+  cases: { cmd: '$ cat cases.md', num: '03' },
+  skills: { cmd: '$ ./skills --map', num: '04' },
+  process: { cmd: '$ cat process.md', num: '05' },
+  experience: { cmd: '$ cat experience.log', num: '06' },
+  learning: { cmd: '$ tail -f learning.log', num: '07' },
+  education: { cmd: '$ cat about.txt', num: '08' },
+  contact: { cmd: '$ ping orkhan', num: '09' },
 };
 
 export const status = 'open to work';
 
 export const neofetch = [
   { key: 'role', value: 'system administrator' },
-  { key: 'os', value: 'linux · rhel · ubuntu' },
-  { key: 'shell', value: 'bash' },
-  { key: 'focus', value: 'hosting, mail, cloud' },
+  { key: 'os', value: 'linux · windows server' },
+  { key: 'shell', value: 'bash · powershell' },
+  { key: 'focus', value: 'mail, hosting, network' },
   { key: 'loc', value: 'baku, az' },
 ];
 
+export const statNumbers = ['100+', '~100', '50+ GB', '~3000'];
+
+// Same order as services.items in the dictionaries.
+export const serviceMeta = [{'code': 'MAIL', 'chips': ['imapsync', 'IMAP', 'DNS']}, {'code': 'NET', 'chips': ['TCP/IP', 'VLAN', 'VPN']}, {'code': 'HW', 'chips': ['Hikvision', 'BIOS', 'PanCafe']}, {'code': 'OPS', 'chips': ['Bash', 'Ansible', 'cron']}, {'code': 'SRV', 'chips': ['Ubuntu', 'RHEL', 'Docker']}, {'code': 'WEB', 'chips': ['WordPress', 'Astro', 'Nginx']}] as const;
+
+export const noteMark = '#';
+export const caseNumbers = [['~100', '50+ GB']];
+export const caseLabels = { problem: 'problem', solution: 'solution', result: 'result', task: 'task' };
+export const caseFiles = { first: 'case-01.md', second: 'case-02', tag: 'email migration' };
+export const caseSecondChips = ['Angular', 'ASP.NET', 'Nginx', 'PostgreSQL', 'Cloudflare'];
+export const satelliteCodes = ['DNS', 'WP', 'MIG', 'OPS'];
+
+// Same order as skills.items in the dictionaries.
+export const skillMeta = [{'name': 'Email', 'state': 'core', 'label': 'CORE'}, {'name': 'Linux', 'state': 'core', 'label': 'CORE'}, {'name': 'DNS & web', 'state': 'core', 'label': 'CORE'}, {'name': 'Hardware', 'state': 'core', 'label': 'CORE'}, {'name': 'Tooling', 'state': 'ready', 'label': 'READY'}, {'name': 'Network', 'state': 'ready', 'label': 'READY'}, {'name': 'Support & AI', 'state': 'ready', 'label': 'READY'}, {'name': 'Windows', 'state': 'up', 'label': 'LEVELING UP'}, {'name': 'Virtual & cloud', 'state': 'up', 'label': 'LEVELING UP'}] as const;
+export const skillsFooter = 'waiting for new entries';
+export const stepLabels = ['step 01', 'step 02', 'step 03', 'step 04'];
+
 // Same order as learning.items in the dictionaries.
-export const learningStatus = [
-  { state: 'progress', label: 'in progress' },
-  { state: 'progress', label: 'in progress' },
-  { state: 'done', label: 'live' },
-  { state: 'queued', label: 'queued' },
-] as const;
+export const learningStatus = [{'state': 'progress', 'label': 'in progress'}, {'state': 'progress', 'label': 'in progress'}, {'state': 'progress', 'label': 'in progress'}, {'state': 'done', 'label': 'live'}, {'state': 'queued', 'label': 'queued'}] as const;
 
 export const learningFooter = 'waiting for new entries';
 

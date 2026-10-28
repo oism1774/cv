@@ -3,6 +3,11 @@ import Base from '../../layouts/Base.astro';
 import Header from '../../components/Header.astro';
 import Hero from '../../components/Hero.astro';
 import SectionHeader from '../../components/SectionHeader.astro';
+import Stats from '../../components/Stats.astro';
+import Services from '../../components/Services.astro';
+import Cases from '../../components/Cases.astro';
+import Skills from '../../components/Skills.astro';
+import Process from '../../components/Process.astro';
 import LearningLog from '../../components/LearningLog.astro';
 import Ping from '../../components/Ping.astro';
 import CvButton from '../../components/CvButton.astro';
@@ -26,6 +31,8 @@ const about = t.about.text.split('**');
   <main id="top" class="kd-container kd-layer">
     <Hero lang={lang} t={t.hero} />
 
+    <Stats labels={t.stats} />
+
     <section id="about" class="kd-section">
       <SectionHeader {...sections.about} />
       <div class="kd-about">
@@ -34,6 +41,30 @@ const about = t.about.text.split('**');
           {about.map((part, i) => (i % 2 ? <span class="kd-lead__key">{part}</span> : part))}
         </p>
       </div>
+    </section>
+
+    <section id="services" class="kd-section">
+      <SectionHeader {...sections.services} />
+      <h2 class="kd-h2">{t.services.title}</h2>
+      <Services items={t.services.items} />
+    </section>
+
+    <section id="cases" class="kd-section">
+      <SectionHeader {...sections.cases} />
+      <h2 class="kd-h2 kd-h2--tight">{t.cases.title}</h2>
+      <Cases t={t.cases} />
+    </section>
+
+    <section id="skills" class="kd-section">
+      <SectionHeader {...sections.skills} />
+      <h2 class="kd-h2">{t.skills.title}</h2>
+      <Skills items={t.skills.items} />
+    </section>
+
+    <section id="process" class="kd-section">
+      <SectionHeader {...sections.process} />
+      <h2 class="kd-h2">{t.process.title}</h2>
+      <Process steps={t.process.steps} />
     </section>
 
     <section id="experience" class="kd-section kd-section--experience">

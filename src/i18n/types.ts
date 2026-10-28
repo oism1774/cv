@@ -21,8 +21,20 @@ export interface Dictionary {
     cv: string;
     contact: string;
   };
+  stats: string[];
   // **...** marks key phrases shown in the brighter text colour.
   about: { title: string; text: string };
+  services: { title: string; items: { title: string; points: string[] }[] };
+  cases: {
+    title: string;
+    note: string;
+    nda: string;
+    first: { tag: string; title: string; lead: string; numLabels: string[]; rows: string[] };
+    second: { title: string; rows: string[] };
+    satellites: { title: string; text: string }[];
+  };
+  skills: { title: string; items: string[] };
+  process: { title: string; steps: { title: string; text: string }[] };
   experience: { title: string; jobs: Job[] };
   learning: { title: string; items: Item[] };
   education: {
