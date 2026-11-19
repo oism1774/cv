@@ -1,19 +1,14 @@
 ---
-// Fallback for hosts without _redirects support (e.g. R2).
-import { color } from '../styles/tokens';
+const target = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/az/`;
 ---
 
 <!doctype html>
 <html lang="az">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="refresh" content="0; url=/az/" />
+    <meta http-equiv="refresh" content={`0; url=${target}`} />
     <meta name="robots" content="noindex" />
-    <link rel="canonical" href="https://khandev.xyz/az/" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <title>khandev.xyz</title>
+    <title>Orkhan Ismayilov</title>
   </head>
-  <body style={`background:${color('bg')}`}>
-    <a href="/az/" style={`color:${color('accent')};font-family:monospace`}>/az/</a>
-  </body>
+  <body><a href={target}>Orkhan Ismayilov</a></body>
 </html>

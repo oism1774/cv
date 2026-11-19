@@ -1,140 +1,140 @@
 ---
-import Base from '../../layouts/Base.astro';
-import Header from '../../components/Header.astro';
-import Hero from '../../components/Hero.astro';
-import SectionHeader from '../../components/SectionHeader.astro';
-import Stats from '../../components/Stats.astro';
-import Services from '../../components/Services.astro';
-import Cases from '../../components/Cases.astro';
-import Skills from '../../components/Skills.astro';
-import Process from '../../components/Process.astro';
-import LearningLog from '../../components/LearningLog.astro';
-import Ping from '../../components/Ping.astro';
-import CvButton from '../../components/CvButton.astro';
-import Footer from '../../components/Footer.astro';
-import { dictionaries, languages, type Lang } from '../../i18n';
-import { sections, cardCaptions } from '../../i18n/common';
+import { content, languages, type Lang } from '../../content';
+import { SITE, EMAIL, WHATSAPP, GITHUB_URL, LINKEDIN_URL } from '../../config';
 
 export function getStaticPaths() {
   return languages.map((lang) => ({ params: { lang } }));
 }
 
 const lang = Astro.params.lang as Lang;
-const t = dictionaries[lang];
-// Odd parts of the split are the **key phrases**.
-const about = t.about.text.split('**');
+const t = content[lang];
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const url = `${SITE}${base}/${lang}/`;
+const contacts = [
+  { label: EMAIL, href: `mailto:${EMAIL}` },
+  { label: `WhatsApp: @${WHATSAPP}`, href: `https://wa.me/${WHATSAPP}` },
+  { label: 'GitHub', href: GITHUB_URL },
+  { label: 'LinkedIn', href: LINKEDIN_URL },
+];
 ---
 
-<Base lang={lang} title={t.meta.title} description={t.meta.description}>
-  <Header lang={lang} />
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{t.title}</title>
+    <meta name="description" content={t.about} />
+    <link rel="canonical" href={url} />
+    {languages.map((l) => <link rel="alternate" hreflang={l} href={`${SITE}${base}/${l}/`} />)}
+    <meta property="og:type" content="profile" />
+    <meta property="og:title" content={t.title} />
+    <meta property="og:description" content={t.about} />
+    <meta property="og:url" content={url} />
+    <meta property="og:image" content={`${SITE}${base}/photo.jpg`} />
+    <link rel="icon" href={`${base}/favicon.svg`} type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Geist:wght@400;500&family=Geist+Mono:wght@400;500&display=swap"
+    />
+  </head>
+  <body>
+    <main class="card">
+      <nav class="langs" aria-label="Language">
+        {languages.map((l) => (
+          <a href={`${base}/${l}/`} aria-current={l === lang ? 'page' : undefined}>{l.toUpperCase()}</a>
+        ))}
+      </nav>
 
-  <main id="top" class="kd-container kd-layer">
-    <Hero lang={lang} t={t.hero} />
-
-    <Stats labels={t.stats} />
-
-    <section id="about" class="kd-section">
-      <SectionHeader {...sections.about} />
-      <div class="kd-about">
-        <h2 class="kd-h2">{t.about.title}</h2>
-        <p class="kd-lead">
-          {about.map((part, i) => (i % 2 ? <span class="kd-lead__key">{part}</span> : part))}
-        </p>
-      </div>
-    </section>
-
-    <section id="services" class="kd-section">
-      <SectionHeader {...sections.services} />
-      <h2 class="kd-h2">{t.services.title}</h2>
-      <Services items={t.services.items} />
-    </section>
-
-    <section id="cases" class="kd-section">
-      <SectionHeader {...sections.cases} />
-      <h2 class="kd-h2 kd-h2--tight">{t.cases.title}</h2>
-      <Cases t={t.cases} />
-    </section>
-
-    <section id="skills" class="kd-section">
-      <SectionHeader {...sections.skills} />
-      <h2 class="kd-h2">{t.skills.title}</h2>
-      <Skills items={t.skills.items} />
-    </section>
-
-    <section id="process" class="kd-section">
-      <SectionHeader {...sections.process} />
-      <h2 class="kd-h2">{t.process.title}</h2>
-      <Process steps={t.process.steps} />
-    </section>
-
-    <section id="experience" class="kd-section kd-section--experience">
-      <SectionHeader {...sections.experience} />
-      <h2 class="kd-h2">{t.experience.title}</h2>
-      <div>
-        {
-          t.experience.jobs.map((job) => (
-            <article class="kd-entry">
-              <div class="kd-entry__when">
-                <span class="kd-entry__caret" aria-hidden="true">&gt;</span>
-                <span>{job.period}</span>
-              </div>
-              <div class="kd-entry__main">
-                <h3 class="kd-entry__company">{job.company}</h3>
-                <p class="kd-entry__role">{job.role}</p>
-                <ul class="kd-entry__points">
-                  {job.points.map((p) => <li>{p}</li>)}
-                </ul>
-              </div>
-            </article>
-          ))
-        }
-      </div>
-    </section>
-
-    <section id="learning" class="kd-section">
-      <SectionHeader {...sections.learning} />
-      <h2 class="kd-h2">{t.learning.title}</h2>
-      <LearningLog items={t.learning.items} />
-    </section>
-
-    <section id="education" class="kd-section">
-      <SectionHeader {...sections.education} />
-      <h2 class="kd-h2">{t.education.title}</h2>
-      <div class="kd-edu">
-        <div class="kd-card">
-          <p class="kd-card__caption">{cardCaptions.education}</p>
-          <p class="kd-card__title">{t.education.school}</p>
-          <p class="kd-card__text">{t.education.degree}</p>
-          <p class="kd-card__date">{t.education.period}</p>
+      <header class="head">
+        <img class="photo" src={`${base}/photo.jpg`} alt="Orkhan Ismayilov" width="104" height="128" />
+        <div>
+          <h1>Orkhan Ismayilov<span class="cursor" aria-hidden="true"></span></h1>
+          <p class="role">{t.role}</p>
+          <p class="loc">{t.location}</p>
         </div>
-        <div class="kd-card">
-          <p class="kd-card__caption">{cardCaptions.languages}</p>
-          <ul class="kd-langs">
-            {
-              t.education.languages.map((l) => (
-                <li>
-                  <span>{l.name}</span>
-                  <span class:list={['kd-langs__level', { 'kd-langs__level--native': l.native }]}>{l.value}</span>
-                </li>
-              ))
-            }
-          </ul>
-        </div>
-      </div>
-    </section>
+      </header>
 
-    <section id="contact" class="kd-section kd-section--contact">
-      <SectionHeader {...sections.contact} />
-      <div class="kd-contact">
-        <div class="kd-contact__intro">
-          <h2 class="kd-contact__title">{t.contact.title}</h2>
-          <p class="kd-contact__text">{t.contact.text}</p>
-          <CvButton lang={lang} label={t.hero.cv} class="kd-contact__cv" />
-        </div>
-        <Ping />
-      </div>
-    </section>
-  </main>
+      <p class="about">{t.about}</p>
 
-  <Footer text={t.footer} name={t.hero.name} />
-</Base>
+      <ul class="stats">
+        {t.stats.map(([n, label]) => (
+          <li><span class="num">{n}</span><span class="lbl">{label}</span></li>
+        ))}
+      </ul>
+
+      <section>
+        <h2>{t.skillsTitle}</h2>
+        <ul class="skills">{t.skills.map((s) => <li>{s}</li>)}</ul>
+      </section>
+
+      <div class="actions">
+        <a class="btn" href={`${base}/cv/orkhan-ismayilov-cv-${lang}.pdf`} download>{t.cv}</a>
+      </div>
+
+      <ul class="contacts">
+        {contacts.map((c) => <li><a href={c.href}>{c.label}</a></li>)}
+      </ul>
+    </main>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --fg: #09090b; --muted: #52525b; --soft: #71717a; --line: #e4e4e7; --panel: #f4f4f5;
+    --accent: #047857; --accent-2: #10b981;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+  body {
+    margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+    padding: 24px 16px; background: #fafafa; color: var(--fg);
+    font-family: 'Geist', system-ui, sans-serif; font-size: 15px; line-height: 1.5;
+  }
+  a { color: inherit; }
+  .card {
+    width: 100%; max-width: 720px; background: #fff; border: 1px solid var(--line); border-radius: 18px;
+    padding: 32px; display: flex; flex-direction: column; gap: 22px;
+  }
+  .langs { display: flex; gap: 4px; justify-content: flex-end; margin-bottom: -10px; font-family: 'Geist Mono', monospace; font-size: 13px; }
+  .langs a { padding: 6px 10px; border-radius: 8px; text-decoration: none; color: var(--soft); min-height: 32px; }
+  .langs a[aria-current='page'] { background: var(--panel); color: var(--accent); }
+  .head { display: flex; gap: 20px; align-items: center; }
+  .photo { width: 104px; height: 128px; object-fit: cover; object-position: 50% 30%; border-radius: 14px; flex-shrink: 0; }
+  h1 { margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 38px; line-height: 1.05; letter-spacing: -0.02em; }
+  .cursor { display: inline-block; width: 9px; height: 0.75em; background: var(--accent-2); margin-left: 8px; vertical-align: baseline; }
+  .role { margin: 8px 0 0; font-size: 17px; font-weight: 500; }
+  .loc { margin: 2px 0 0; font-family: 'Geist Mono', monospace; font-size: 13px; color: var(--soft); }
+  .about { margin: 0; color: #27272a; }
+  .stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .stats li { padding: 12px 12px 12px 0; display: flex; flex-direction: column; gap: 4px; }
+  .stats li + li { padding-left: 12px; border-left: 1px solid var(--line); }
+  .num { font-family: 'Fraunces', serif; font-size: 28px; line-height: 1; }
+  .lbl { font-size: 13px; color: var(--muted); line-height: 1.35; }
+  h2 { margin: 0 0 10px; font-family: 'Geist Mono', monospace; font-weight: 400; font-size: 13px; color: var(--accent); }
+  .skills { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+  .skills li { padding: 4px 10px; border-radius: 999px; background: var(--panel); font-size: 13px; }
+  .actions { display: flex; }
+  .btn {
+    display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 10px;
+    background: var(--accent); color: #fff; text-decoration: none; font-weight: 500;
+  }
+  .btn:hover { background: #065f46; }
+  .contacts { list-style: none; margin: 0; padding: 16px 0 0; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 6px 22px; font-family: 'Geist Mono', monospace; font-size: 13px; }
+  .contacts a { color: #3f3f46; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; min-height: 28px; }
+  .contacts a::before { content: ''; width: 6px; height: 6px; border-radius: 999px; background: var(--accent-2); }
+  .contacts a:hover { color: var(--accent); }
+  @media (max-width: 600px) {
+    body { padding: 16px; align-items: flex-start; }
+    .card { padding: 22px 18px; gap: 18px; }
+    .head { gap: 14px; }
+    .photo { width: 80px; height: 100px; }
+    h1 { font-size: 24px; white-space: nowrap; }
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .stats li:nth-child(3) { padding-left: 0; border-left: 0; }
+    .stats li:nth-child(n + 3) { border-top: 1px solid var(--line); }
+    .btn { width: 100%; justify-content: center; }
+  }
+</style>

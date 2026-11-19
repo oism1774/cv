@@ -1,20 +1,8 @@
-# khandev.xyz
+# cv
 
-Одностраничный сайт-визитка на Astro + Tailwind CSS. Три языка: `/az/`, `/ru/`, `/en/`.
+One-screen business card of Orkhan Ismayilov (AZ / RU / EN): https://oism1774.github.io/cv/
 
-## Локально
-
-```bash
-npm install
-npm run dev      # http://localhost:4321/az/
-npm run build    # сборка статики
-npm run preview  # просмотр собранной версии
-```
-
-## Где что лежит
-
-- Готовая статика после сборки — в `dist/` (её и заливать на Cloudflare Pages / R2).
-- Тексты — `src/i18n/en.ts`, `ru.ts`, `az.ts`; общие терминальные подписи — `src/i18n/common.ts`.
-- Контакты — `src/config.ts` (пустое значение = ссылка скрыта).
-- CV — `public/cv/orkhan-ismayilov-cv-{en,ru,az}.pdf`.
-- Редирект `/` → `/az/`: `public/_redirects` (Pages) и meta refresh в `dist/index.html` (R2).
+- Astro, static output, deployed to GitHub Pages by `.github/workflows/pages.yml` on every push to `main`.
+- Texts: `src/content.ts`. Contacts and URLs: `src/config.ts`.
+- CV PDFs: `public/cv/`.
+- `redirect/` + `wrangler.toml`: the old khandev.xyz Worker now only redirects to the GitHub Pages site.
